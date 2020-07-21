@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="nav-container">
+        <nav id="navbar">
+            <header id="nav-header">CSS Documentation</header>
+            <ul id="nav-ul">
+                <li class="nav-li">
+                    <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-link" href="#CSS_syntax">CSS syntax</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-link" href="#Starting_with_some_HTML">Starting with some HTML</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-link" href="#Adding_CSS_to_our_document">Adding CSS to our document</a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-link" href="#Styling_HTML_elements">Styling HTML elements</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main id="main-doc">
+        <section class="main-section" id="What_is_CSS?">
+            <header id="main-header">What is CSS?</header>
+            <article>
+                <p>CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
+                </p>
+
+                <p>A document is usually a text file structured using a markup language, HTML is the most common markup language, but you may also come across other markup languages such as SVG or XML.
+                </p>
+
+                <p>Presenting a document to a user means converting it into a form usable by your audience. Browsers, like Firefox, Chrome, or Edge , are designed to present documents visually, for example, on a computer screen, projector or printer.
+                </p>
+                
+                <p>CSS can be used for very basic document text styling — for example changing the color and size of headings and links. It can be used to create layout — for example turning a single column of text into a layout with a main content area and a sidebar for related information. It can even be used for effects such as animation.
+                </p>
+            </article>
+        </section>
+        <section id="CSS_syntax" class="main-section">
+            <header>CSS syntax</header>
+            <article>
+                <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."
+                </p>
+
+                <p>The following code shows a very simple CSS rule that would achieve the styling described above:
+                </p>
+                <code>
+                    h1 {
+                        color: red;
+                        font-size: 5em;
+                    }
+                </code>
+                <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case we are styling level one headings (&lth1&gt).
+                </p>
+                <p>We then have a set of curly braces { }. Inside those will be one or more declarations, which take the form of property and value pairs. Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.
+                </p>
+                <p>Before the colon, we have the property, and after the colon, the value. CSS properties have different allowable values, depending on which property is being specified. In our example, we have the color property, which can take various color values. We also have the font-size property. This property can take various size units as a value.
+                </p>
+                <p>A CSS stylesheet will contain many such rules, written one after the other.
+                </p>
+                <code>
+                    h1 {
+                        color: red;
+                        font-size: 5em;
+                    }
+                    
+                    p {
+                        color: black;
+                    }
+                </code>
+            </article>
+        </section>
+        <section id="Starting_with_some_HTML" class="main-section">
+                <header>Starting with some HTML</header>
+                <article>
+                <p>Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as index.html in a folder on your machine.     
+                </p>
+                <code>
+                    &lt!doctype html&gt
+                    &lthtml lang="en"&gt
+                    &lthead&gt
+                        &ltmeta charset="utf-8"&gt
+                        &lttitle&gtGetting started with CSS&lt/title&gt
+                    &lt/head&gt
+                    
+                    &ltbody&gt
+                        
+                        &lth1&gtI am a level one heading&lt/h1&gt
+                    
+                        &ltp&gtThis is a paragraph of text. In the text is a &ltspan&gtspan element&lt/span&gt 
+                    and also a &lta href="http://example.com"&gtlink&lt/a&gt.&lt/p&gt
+                    
+                        &ltp&gtThis is the second paragraph. It contains an &ltem&gtemphasized&lt/em&gt element.&lt/p&gt
+                    
+                        &ltul&gt
+                            &ltli&gtItem one&lt/li&gt
+                            &ltli&gtItem two&lt/li&gt
+                            &ltli&gtItem &ltem&gtthree&lt/em&gt&lt/li&gt
+                        &lt/ul&gt
+                    
+                    &lt/body&gt
+                    
+                    &lt/html&gt 
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Adding_CSS_to_our_document">
+                <header>Adding CSS to our document</header>
+                <article>
+                <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.</p>
+                <p>Create a file in the same folder as your HTML document and save it as styles.css. The .css extension shows that this is a CSS file.</p>
+                <p>To link styles.css to index.html add the following line somewhere inside the &lthead&gt of the HTML document:</p>
+                <code>
+                    &ltlink rel="stylesheet" href="styles.css"&gt   
+                </code>
+                <p>
+                    This &ltlink&gt element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute. You can test that the CSS works by adding a rule to styles.css. Using your code editor add the following to your CSS file:
+                </p>
+                <code>h1 {
+                    color: red;
+                  }</code>
+                <p>Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.</p>
+                <p>
+                    You can continue to work in styles.css locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.
+                </p>
+            
+
+
+            </article>
+
+            
+        </section>
+        <section class="main-section" id="Styling_HTML_elements">
+            <header>Styling HTML elements</header>
+            <article>
+                <p>
+                    By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an element selector — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector p. To turn all paragraphs green you would use:
+                </p>
+                <code>
+                    p {
+                        color: green;
+                      }
+                </code>
+                <p>You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be green my rule looks like this:</p>
+                <code>p, li {
+                    color: green;
+                }</code>
+                <p> Here's an example of CSS applied to HTML content:</p>
+                <div id="example-div">
+                    <h1 id="example-h1">I am a level one heading</h1>
+
+                    <p class="example-p">This is a paragraph of text. In the text is a <span>span element</span> 
+                and also a <a href="http://example.com">link</a>.</p>
+                
+                    <p class="example-p">This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+                
+                    <ul id="example-ul">
+                        <li class="example-li">Item one</li>
+                        <li class="example-li">Item two</li>
+                        <li class="example-li">Item three</li>
+                        <li class="example-li">Item four</li>
+                        <li class="example-li">Item <em>five</em></li>
+                    </ul>
+                
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

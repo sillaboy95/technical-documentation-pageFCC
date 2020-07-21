@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+code {
+    display: block;
+    white-space: pre-wrap;
+  }
+body {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+#nav-container {
+    margin: 0;
+    
+    max-width: 550px;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+    padding: 0px;
+    padding-right: 0;
+    
+    
+
+}
+
+main {
+    position: absolute;
+
+    
+    background-color:rgba(255, 255, 255, 0.07);
+    margin: 0;
+    margin-left: 300px;
+    height: cover;
+    padding: 30px;
+    padding-top: 18px;
+    z-index: 1;
+    
+
+}
+
+header {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+nav {
+    padding: 0;
+}
+
+#nav-header {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right:5px;
+}
+
+
+
+#nav-ul {
+    list-style-type: none;
+    padding: 0;
+    
+    
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-left: 0px;
+    color: black
+}
+
+.nav-li {
+    margin: 20px;
+    
+    border-top: solid 1px black;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 0;
+    margin-left:0;
+    margin-right: 0;
+
+}
+
+@media (max-width: 592px) {
+    #nav-container{
+        position: relative;
+        top: 20px;
+        margin-left:auto;
+        margin-right: auto;
+        max-width: 400px;
+        padding-bottom: 1px;
+    }
+
+    main {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        
+    }
+
+    
+}
+
+#example-div {
+    background-color: rgba(208, 211, 26, 0.101)
+
+}
+
+#example-h1{
+    color: blue;
+}
+
+.example-p {
+    color: pink
+}
+
+#example-ul {
+  background-color: rgba(102, 11, 11, 0.129)
+}
+
+.example-li {
+    color: red
+}
+
